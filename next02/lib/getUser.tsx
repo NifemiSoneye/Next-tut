@@ -1,10 +1,10 @@
 import React from "react";
 
-export default async function getUser(userId: string): Promise<User> {
+export default async function getUser(userId: string) {
   console.log("fetching user:", userId);
   const res = await fetch(
     `https://jsonplaceholder.typicode.com/users/${userId}`,
   );
-  if (!res.ok) throw new Error("Falied to fetch user");
+  if (!res.ok) return undefined;
   return res.json();
 }
