@@ -4,6 +4,8 @@ import styles from "./page.module.css";
 import Posts from "./components/Posts";
 const inter = Inter({ subsets: ["latin"] });
 
+export const revalidate = 10;
+
 export default function Home() {
   return (
     <main className="px-6 mx-auto">
